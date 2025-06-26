@@ -1,7 +1,7 @@
-🧠 AI Chatbot with RAG (LangChain + OpenAI + Qdrant)
+## 🧠 AI Chatbot with RAG (LangChain + OpenAI + Qdrant)
 This project is a customizable AI chatbot powered by FastAPI, LangChain, OpenAI (GPT-4), and Qdrant. It uses Retrieval-Augmented Generation (RAG) to answer user queries based on uploaded PDFs — designed for business-specific, multi-tenant, or domain-aware chatbot use cases.
 
-📦 Features
+## 📦 Features
 GPT-4 integration via OpenAI API
 
 Upload and embed PDF documents (per client_id)
@@ -14,7 +14,7 @@ FastAPI backend with clean and minimal endpoints
 
 Type-annotated, commented, and production-ready code
 
-🗂 Project Structure
+## 🗂 Project Structure
 ai-chatbot-rag/
 ├── main.py # FastAPI app with /chat and /upload-docs endpoints
 ├── rag_engine.py # Core RAG logic (load/store/retrieve/answer)
@@ -23,31 +23,31 @@ ai-chatbot-rag/
 ├── temp/ # Temporary PDF upload folder (git-ignored)
 └── README.md # This file
 
-🚀 Quickstart
-1. Clone the repo
+## 🚀 Quickstart
+### 1. Clone the repo
 git clone https://github.com/alialaei/ai-chatbot-rag.git
 cd ai-chatbot-rag
 
-2. Setup environment
+### 2. Setup environment
 cp .env.example .env
 
 Edit .env and add your OpenAI API key and Qdrant URL
-3. Create and activate a virtual environment
+### 3. Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
-4. Install dependencies
+### 4. Install dependencies
 pip install -r requirements.txt
 
-5. Start Qdrant (via Docker)
+### 5. Start Qdrant (via Docker)
 docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
 
-6. Run the FastAPI server
+### 6. Run the FastAPI server
 uvicorn main:app --reload
 
 Then open: http://localhost:8000/docs
 
-🧪 API Endpoints
+## 🧪 API Endpoints
 POST /upload-docs
 Upload a PDF file for a specific client ID.
 
@@ -66,13 +66,13 @@ Request (JSON):
 "message": "What are the terms of the contract?"
 }
 
-🧰 Environment Variables
+## 🧰 Environment Variables
 Example .env file:
 
 OPENAI_API_KEY=sk-...
 QDRANT_URL=http://localhost:6333
 
-📝 TODO / Future Enhancements
+## 📝 TODO / Future Enhancements
 Add support for multi-file upload
 
 Add authentication (JWT or OAuth)
@@ -83,8 +83,8 @@ Dashboard for usage metrics
 
 Unit & integration tests
 
-📄 License
+## 📄 License
 MIT — feel free to use, fork, and contribute.
 
-👨‍💻 Author
+## 👨‍💻 Author
 Created by Ali Alaei – CTO, backend/devops engineer & open-source enthusiast.
