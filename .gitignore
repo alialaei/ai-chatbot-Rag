@@ -1,0 +1,10 @@
+.env
+.docker-compose.yaml
+.history
+venv
+.vscode/
+.idea/
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
